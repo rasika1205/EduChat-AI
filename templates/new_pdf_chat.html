@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="relative isolate overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <!-- Animated background elements -->
+        <div class="fixed inset-0 -z-10">
+            <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div class="absolute top-3/4 left-3/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-700/20 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+            aria-hidden="true">
+            <defs>
+                <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
+                    patternUnits="userSpaceOnUse">
+                    <path d="M.5 200V.5H200" fill="none" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+        </svg>
+
+        <div
+            class="mx-auto sm:h-screen w-screen flex flex-col sm:flex-row justify-center items-center px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-20 lg:py-20">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+                <div class="relative ml-4">
+                    <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl"></div>
+                    <!--<img src="https://res.cloudinary.com/dtsuvx8dz/image/upload/v1710486664/hdbyd4gkogrzdk3lb23j.png"
+                        class="relative h-16 w-16 brightness-0 invert drop-shadow-lg" alt="">-->
+                </div>
+
+                <div class="mt-24 sm:mt-32 lg:mt-4">
+                    <a href="#" class="inline-flex space-x-6">
+                        <span
+                            class="rounded-full bg-gradient-to-br from-green-400 via-blue-500 to-cyan-600 px-4 py-2 text-sm font-bold leading-6 text-white ring-2 ring-cyan-400/30 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105">
+                            🤖 GPT-3.5 LangChain
+                        </span>
+                        <span class="inline-flex items-center space-x-1 text-sm font-medium leading-2 text-gray-300">
+                            <svg class="h-5 w-5 text-cyan-400" viewBox="0 0 20 20" fill="currentColor"
+                                aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <h1 class="mt-10 text-4xl font-black tracking-tight bg-gradient-to-r from-white via-cyan-300 to-blue-400 bg-clip-text text-transparent sm:text-6xl leading-tight">
+                    Chat with Your PDFs Using AI Technology!
+                </h1>
+
+                <p class="mt-6 text-lg leading-8 text-gray-300 font-medium">
+                    Effortlessly communicate, edit, and share your PDFs with our AI-powered chat interface.
+                    <span class="text-cyan-400 font-semibold">Experience seamless collaboration like never before.</span>
+                </p>
+
+                <form action="/process" method="post" enctype="multipart/form-data">
+                    <div class="mt-10 flex flex-col justify-start items-start sm:flex-row sm:items-center gap-x-6">
+                        <button type="submit"
+                            class="my-2 bg-gradient-to-br from-green-400 via-blue-500 to-cyan-600 hover:from-green-300 hover:via-blue-400 hover:to-cyan-500 px-10 py-4 rounded-2xl text-sm font-bold text-white shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
+                            🚀 Process PDFs
+                        </button>
+
+                        <input type="file" name="pdf_docs" id="pdf_docs" accept=".pdf" multiple required
+                            class="text-sm font-semibold leading-6 text-gray-200 bg-gray-700/50 backdrop-blur-sm border-2 py-3 px-4 rounded-2xl block w-full text-sm border-gradient-to-r from-green-400/50 via-blue-500/50 to-cyan-600/50 hover:border-cyan-500/50 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300
+                                file:mr-4 file:py-2 file:px-4
+                                file:rounded-full file:border-0
+                                file:text-sm file:font-semibold
+                                file:bg-cyan-500 file:text-white file:shadow-lg
+                                hover:file:bg-cyan-400 file:transition-all file:duration-300">
+                    </div>
+                </form>
+            </div>
+
+            <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+                <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                    <div class="lg:-m-4 lg:rounded-2xl lg:p-4">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-cyan-500/20 rounded-2xl blur-2xl"></div>
+                            <img src="https://res.cloudinary.com/dtsuvx8dz/image/upload/v1708164754/gwohsoi1xgpuq2fmryay.png"
+                                alt="App screenshot"
+                                class="relative sm:w-[23rem] w-2/3 sm:h-[24rem] sm:pl-0 pl-12 rounded-2xl drop-shadow-2xl ring-1 ring-white/10 hover:ring-cyan-500/30 transition-all duration-300 hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

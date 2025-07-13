@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="relative isolate overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen">
+        <!-- Animated background elements -->
+        <div class="fixed inset-0 -z-10">
+            <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div class="absolute top-3/4 left-3/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-700/20 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+            aria-hidden="true">
+            <defs>
+                <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
+                    patternUnits="userSpaceOnUse">
+                    <path d="M.5 200V.5H200" fill="none" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+        </svg>
+
+        <form action="/" class="p-4">
+            <button type="submit"
+                class="my-2 bg-gradient-to-br from-green-400 via-blue-500 to-cyan-600 hover:from-green-300 hover:via-blue-400 hover:to-cyan-500 px-8 py-3 rounded-2xl text-sm font-bold text-white shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 transform hover:scale-105 transition-all duration-300">
+                ← Back
+            </button>
+        </form>
+
+        <div class="mx-auto sm:h-screen w-screen flex flex-col sm:flex-row justify-center items-center px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-20 lg:py-20">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+                <div class="relative ml-4">
+                    <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
+                    <!--<img src="https://res.cloudinary.com/dtsuvx8dz/image/upload/v1710486664/hdbyd4gkogrzdk3lb23j.png"
+                        class="relative h-16 w-16 brightness-0 invert drop-shadow-lg" alt="">-->
+                </div>
+
+                <div class="mt-24 sm:mt-32 lg:mt-4">
+                    <a href="#" class="inline-flex space-x-6">
+                        <span
+                            class="rounded-full bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 px-4 py-2 text-sm font-bold leading-6 text-white ring-2 ring-purple-400/30 shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105">
+                            📋 Essay Grading Rubric
+                        </span>
+                        <span class="inline-flex items-center space-x-1 text-sm font-medium leading-2 text-gray-300">
+                            <svg class="h-5 w-5 text-purple-400" viewBox="0 0 20 20" fill="currentColor"
+                                aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="mt-10">
+                    <h1 class="text-3xl font-black text-white mb-6">
+                        Create Your <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Grading Rubric</span>
+                    </h1>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Define your grading criteria and standards to ensure consistent and fair essay evaluation.
+                    </p>
+                </div>
+
+                <form action="/essay_grading" method="post" enctype="multipart/form-data">
+                    <hr class="my-6 border-gray-700/50">
+
+                    <div class="w-6/7">
+                        <div class="relative w-full min-w-[200px]">
+                            <textarea rows="6" cols="60" name="essay_rubric"
+                                class="peer resize-y w-full border-2 border-gradient-to-r from-green-400/50 via-blue-500/50 to-purple-600/50 h-full min-h-[150px] w-full resize-none rounded-xl bg-gray-700/50 backdrop-blur-sm px-4 py-3 font-sans text-sm font-normal text-gray-100 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-600/50 focus:border-2 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-gray-600/50"
+                                placeholder=" "></textarea>
+                            <label
+                                class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-semibold leading-tight text-purple-300 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-600 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-600 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-purple-300 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-purple-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-purple-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-400">
+                                📋 Grading Rubric
+                            </label>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-purple-900/20 backdrop-blur-sm rounded-xl border border-purple-500/30">
+                            <h3 class="text-purple-300 font-semibold mb-2">💡 Rubric Guidelines:</h3>
+                            <ul class="text-gray-300 text-sm space-y-1">
+                                <li>• Define scoring criteria (e.g., 1-5 scale)</li>
+                                <li>• Include categories like grammar, content, structure</li>
+                                <li>• Specify expectations for each grade level</li>
+                                <li>• Add any special requirements or focus areas</li>
+                            </ul>
+                        </div>
+
+                        <button type="submit"
+                            class="mt-6 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 hover:from-green-300 hover:via-blue-400 hover:to-purple-500 px-10 py-4 rounded-2xl text-sm font-bold text-white shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
+                            ✨ Continue to Grading
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

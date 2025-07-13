@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Chat Interface</title>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen">
+    <!-- Animated background elements -->
+    <div class="fixed inset-0 -z-10">
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div class="absolute top-3/4 left-3/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+    </div>
+
+    <section class="relative">
+        <div>
+            <form action="/" class="p-4">
+                <button type="submit"
+                    class="my-2 bg-gradient-to-br from-green-400 via-blue-500 to-cyan-600 hover:from-green-300 hover:via-blue-400 hover:to-cyan-500 px-8 py-3 rounded-2xl text-sm font-bold text-white shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transform hover:scale-105 transition-all duration-300">
+                    ← Back
+                </button>
+            </form>
+
+            <div class="flex flex-col justify-center items-center">
+                <h1
+                    class="text-5xl py-2 font-black text-transparent bg-clip-text bg-gradient-to-tr from-blue-400 via-purple-500 to-gray-100 drop-shadow-2xl underline decoration-double decoration-blue-400/50">
+                    💬 Chat Interface
+                </h1>
+
+                <div class="w-screen flex flex-col justify-evenly items-center py-8 px-4">
+                    <div class="pb-2 w-full sm:w-[50rem] border-2 border-blue-500/50 mx-5 rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 bg-gray-800/50 backdrop-blur-sm ring-1 ring-white/10">
+                        <h1
+                            class="w-full py-4 px-4 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 font-bold text-white text-lg shadow-lg">
+                            💭 Ask a question
+                        </h1>
+
+                        {% if chat_history %}
+                        <ul class="py-4 px-3 max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-500/50 scrollbar-track-gray-700/50">
+                            {% for message in chat_history %}
+                            <li
+                                class="drop-shadow-xl my-3 bg-gradient-to-br from-green-400/20 via-blue-500/20 to-purple-600/20 backdrop-blur-sm py-4 px-5 rounded-xl text-gray-100 font-semibold sm:overflow-visible overflow-hidden sm:text-base text-xs font-mono border border-gray-600/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:scale-[1.02]">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                                    <span class="leading-relaxed">{{ message.content }}</span>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <div class="w-full flex justify-center py-8">
+                            <p
+                                class="border-2 border-dashed border-blue-500/50 text-gray-300 px-6 py-4 w-1/2 flex justify-center font-mono rounded-xl bg-gray-700/30 backdrop-blur-sm">
+                                🤖 No chat history yet.
+                            </p>
+                        </div>
+                        {% endif %}
+
+                        <form action="/chat" method="post" class="p-4">
+                            <div class="w-full flex flex-row justify-evenly gap-3">
+                                <div class="relative flex-1">
+                                    <input
+                                        class="bg-gray-700/80 backdrop-blur-sm w-full py-4 rounded-2xl text-white font-mono px-6 border-2 border-gray-600/50 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 placeholder-gray-400 hover:border-blue-500/50"
+                                        placeholder="✨ Type your question here..." type="text" name="user_question" id="user_question" required>
+                                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                                </div>
+
+                                <button
+                                    class="px-8 py-4 rounded-2xl bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 hover:from-green-300 hover:via-blue-400 hover:to-purple-500 text-white font-bold shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1"
+                                    type="submit">
+                                    🚀 Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
