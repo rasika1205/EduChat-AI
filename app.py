@@ -1,4 +1,4 @@
-gemini_api_key_mount="AIzaSyCsAJm_lOqye8oSi7DlgXiinoGLEF0Z06I"
+gemini_api_key_mount="your key"
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from PyPDF2 import PdfReader
