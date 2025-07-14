@@ -1,8 +1,8 @@
 ---
 
-# ChatScholar
+# EDUChat-AI
 
-ChatScholar is a web-based application that leverages AI and document processing to help users interact with PDF documents, chat about their contents, and grade essays using advanced language models.
+EDUChat-AI is a web-based application that leverages AI and document processing to help users interact with PDF documents, chat about their contents, and grade essays using advanced language models.
 
 ---
 
