@@ -28,7 +28,7 @@ ChatScholar is a web-based application that leverages AI and document processing
 - **Custom Rubric:** Upload or define your own scoring rubric for essay grading (see [Customization](#customization-essay-rubric)).
 - **Modern Web UI:** Clean chat and grading interfaces built with Flask.
 
-##Tech Stack
+## Tech Stack
 - **Backend** : Python, Flask
 - **AI & NLP** : Google Gemini AI, LangChain, HuggingFace Embeddings, FAISS
 - **PDF Processing**: PyPDF2
