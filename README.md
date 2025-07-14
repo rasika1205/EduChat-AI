@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+![Build Passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![License](https://img.shields.io/badge/license-proprietary-lightgrey.svg)
+
 ---
 
 # EDUChat-AI
@@ -138,10 +142,14 @@ Contributions are welcome! Please open issues or submit pull requests for improv
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
+This project is **proprietary** and protected by copyright © 2025 Rasika Gautam.
+
+You are welcome to view the code for educational or evaluation purposes (e.g., portfolio review by recruiters).  
+However, you may **not copy, modify, redistribute, or claim this project as your own** under any circumstances — including in interviews or job applications — without written permission.
+
+---
+
+Feel free to explore the code.
 
 ---
 
@@ -155,3 +163,4 @@ This project is licensed under the [MIT License](LICENSE).
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 
 ---
+_Developed with 💡 by [Rasika Gautam](https://github.com/rasika1205)_
