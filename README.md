@@ -163,4 +163,9 @@ Feel free to explore the code.
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 
 ---
-_Developed with 💡 by [Rasika Gautam](https://github.com/rasika1205)_
+
+## 🧑‍💻 Author
+
+**Rasika Gautam**
+*Data Science & AI Enthusiast* | B.Tech MAC, NSUT
+[GitHub](https://github.com/rasika1205)
