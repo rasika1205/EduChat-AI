@@ -114,8 +114,6 @@ Supported formats: plain text (default), or upload a JSON/CSV file with criteria
 }
 ```
 
-[Sample Rubric File](rubrics/sample_rubric.json)
-
 ---
 
 ## File Structure
@@ -149,9 +147,6 @@ However, you may **not copy, modify, redistribute, or claim this project as your
 
 ---
 
-Feel free to explore the code.
-
----
 
 ## Acknowledgments
 
