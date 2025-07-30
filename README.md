@@ -18,7 +18,6 @@ EDUChat-AI is a web-based application that leverages AI and document processing 
 - [Usage](#usage)
 - [Customization: Essay Rubric](#customization-essay-rubric)
 - [File Structure](#file-structure)
-- [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -129,12 +128,6 @@ app.py
 __data__/
 .env
 ```
-
----
-
-## Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for improvements or bug fixes.
 
 ---
 
